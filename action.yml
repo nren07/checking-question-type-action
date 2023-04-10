@@ -3,7 +3,7 @@ description: 'Action to get question type from acciojob backend for any question
 author: 'acciojob'
 outputs:
   questionType:
-    description: 'Question Type of the question like REACT,JAVA', 
+    description: 'Question Type of the question like REACT,JAVA'
 runs:
   using: 'node12'
   main: 'dist/index.js'
