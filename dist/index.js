@@ -83,6 +83,7 @@ function run() {
                 questionTypeQuery.append('templateName', assignmentName);
                 const questionTypeData = yield axios_1.default.get(`${ACCIO_API_ENDPOINT}/github/get-question-type?${questionTypeQuery.toString()}`);
                 const questionTypeContent = questionTypeData.data.questionType;
+                process.stdout.write(`\nQuestion Type: ${questionTypeContent}\n`);
                 core.setOutput('questionType', questionTypeContent);
                 process.exit(0);
             }

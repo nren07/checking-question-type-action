@@ -44,6 +44,7 @@ async function run(): Promise<void> {
         `${ACCIO_API_ENDPOINT}/github/get-question-type?${questionTypeQuery.toString()}`
       );
       const questionTypeContent = questionTypeData.data.questionType;
+       process.stdout.write(`\nQuestion Type: ${questionTypeContent}\n`);
       core.setOutput('questionType', questionTypeContent);
       process.exit(0);
       
